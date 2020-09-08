@@ -13,7 +13,7 @@ export const { Types: itunesContainerTypes, Creators: itunesContainerCreators } 
   failureGetItunesSongs: ['error'],
   clearItunesSongs: []
 });
-export const initialState = { songName: null, songsData: [], songsError: null };
+export const initialState = { songName: null, songsData: {}, songsError: null };
 
 /* eslint-disable default-case, no-param-reassign */
 export const itunesContainerReducer = (state = initialState, action) =>

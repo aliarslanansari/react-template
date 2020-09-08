@@ -22,7 +22,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="ant-card HomeContainer__CustomCard-l0s8pp-0 etQjAO ant-card-bordered"
+        class="ant-card ant-card-bordered HomeContainer__CustomCard-l0s8pp-0 etQjAO"
         maxwidth="500"
       >
         <div
@@ -48,7 +48,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
             Get details of repositories
           </p>
           <span
-            class="ant-input-search ant-input-affix-wrapper"
+            class="ant-input-affix-wrapper ant-input-search"
           >
             <input
               class="ant-input"
@@ -85,7 +85,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="ant-card HomeContainer__CustomCard-l0s8pp-0 lglBtv ant-card-bordered"
+        class="ant-card ant-card-bordered HomeContainer__CustomCard-l0s8pp-0 lglBtv"
         color="grey"
       >
         <div

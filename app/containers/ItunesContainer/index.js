@@ -51,6 +51,8 @@ export function ItunesContainer({
   maxwidth,
   padding
 }) {
+  useInjectSaga({ key: 'itunesContainer', saga });
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -66,7 +68,6 @@ export function ItunesContainer({
       setLoading(true);
     }
   }, []);
-  useInjectSaga({ key: 'itunesContainer', saga });
 
   const history = useHistory();
 
@@ -158,7 +159,7 @@ ItunesContainer.propTypes = {
     resultCount: PropTypes.number,
     results: PropTypes.array
   }),
-  songsError: PropTypes.object,
+  songsError: PropTypes.string,
   songName: PropTypes.string,
   history: PropTypes.object,
   maxwidth: PropTypes.number,

@@ -1,4 +1,4 @@
 import { generateApiClient } from '@utils/apiUtils';
-const repoApi = generateApiClient('itunes');
+const songsApi = generateApiClient('itunes');
 
-export const getSongs = songTerm => repoApi.get(`/search?term=${songTerm}`);
+export const getSongs = songTerm => songsApi.get(`/search?term=${songTerm}`);
