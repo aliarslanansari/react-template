@@ -16,6 +16,7 @@ import { useInjectSaga } from 'utils/injectSaga';
 import { selectHomeContainer, selectReposData, selectReposError, selectRepoName } from './selectors';
 import { homeContainerCreators } from './reducer';
 import saga from './saga';
+import routeConstants from '@utils/routeConstants';
 
 const { Search } = Input;
 
@@ -126,13 +127,13 @@ export function HomeContainer({
     );
   };
   const refreshPage = () => {
-    history.push('stories');
+    history.push(routeConstants.itunes.route);
     window.location.reload();
   };
   return (
     <Container maxwidth={maxwidth} padding={padding}>
       <RightContent>
-        <Clickable textId="stories" onClick={refreshPage} />
+        <Clickable textId="itunes_page" onClick={refreshPage} />
       </RightContent>
       <CustomCard title={intl.formatMessage({ id: 'repo_search' })} maxwidth={maxwidth}>
         <T marginBottom={10} id="get_repo_details" />

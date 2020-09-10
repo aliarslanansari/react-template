@@ -1,18 +1,21 @@
-import React, { useEffect, memo, useState } from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { compose } from 'redux';
 import get from 'lodash/get';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
-import { Card, Skeleton, Input } from 'antd';
 import styled from 'styled-components';
+import { Card, Skeleton, Input } from 'antd';
+import React, { useEffect, memo, useState } from 'react';
 import { injectIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
+
 import T from '@components/T';
 import Clickable from '@components/Clickable';
-import { useInjectSaga } from 'utils/injectSaga';
+import { useInjectSaga } from '@utils/injectSaga';
+import routeConstants from '@utils/routeConstants';
+
 import { selectItunesContainer, selectSongsData, selectSongsError, selectSongName } from './selectors';
 import { itunesContainerCreators } from './reducer';
 import saga from './saga';
@@ -90,7 +93,7 @@ export function ItunesContainer({
           <Skeleton loading={loading} active>
             {songName && (
               <div>
-                <T id="search_query" values={{ songName }} />
+                <T id="search_query_songs" values={{ songName }} />
               </div>
             )}
             {resultCount !== 0 && (
@@ -127,7 +130,7 @@ export function ItunesContainer({
     );
   };
   const refreshPage = () => {
-    history.push('itunes');
+    history.push(routeConstants.itunes);
     window.location.reload();
   };
   return (

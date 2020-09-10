@@ -9,6 +9,7 @@ import history from 'utils/history';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import homeContainerReducer from 'containers/HomeContainer/reducer';
 import itunesContainerReducer from 'containers/ItunesContainer/reducer';
+import itunesGridReducer from './containers/ItunesGrid/reducer';
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
@@ -18,7 +19,8 @@ export default function createReducer() {
     language: languageProviderReducer,
     router: connectRouter(history),
     homeContainer: homeContainerReducer,
-    itunesContainer: itunesContainerReducer
+    itunesContainer: itunesContainerReducer,
+    itunesGrid: itunesGridReducer
   });
 
   return rootReducer;
