@@ -3,6 +3,7 @@ import HomeContainer from '@containers/HomeContainer/Loadable';
 import routeConstants from '@utils/routeConstants';
 import ItunesContainer from '@containers/ItunesContainer/Loadable';
 import ItunesGrid from './containers/ItunesGrid/Loadable';
+import SongDetailsContainer from './containers/SongDetailsContainer/Loadable';
 export const routeConfig = {
   repos: {
     component: HomeContainer,
@@ -15,6 +16,10 @@ export const routeConfig = {
   itunesGrid: {
     component: ItunesGrid,
     ...routeConstants.itunesGrid
+  },
+  songDetails: {
+    component: SongDetailsContainer,
+    ...routeConstants.songDetails
   },
   notFoundPage: {
     component: NotFound,
