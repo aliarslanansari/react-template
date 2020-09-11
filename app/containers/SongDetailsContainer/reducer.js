@@ -27,7 +27,7 @@ export const songDetailsContainerReducer = (state = initialState, action) =>
         draft.songData = action.data;
         break;
       case songDetailsContainerTypes.FAILURE_GET_SONG:
-        draft.songData = get(action.error, 'message', 'something_went_wrong');
+        draft.songError = get(action.error, 'message', 'something_went_wrong');
         break;
       case songDetailsContainerTypes.CLEAR_GET_SONG:
         return initialState;

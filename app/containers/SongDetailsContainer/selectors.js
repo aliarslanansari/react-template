@@ -6,7 +6,7 @@ import { get } from 'lodash';
  */
 const selectSongDetailsContainerDomain = state => state.songDetailsContainer || initialState;
 
-const selectSongDetailsContainer = () =>
+export const selectSongDetailsContainer = () =>
   createSelector(
     selectSongDetailsContainerDomain,
     substate => substate

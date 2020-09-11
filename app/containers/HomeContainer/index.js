@@ -128,7 +128,7 @@ export function HomeContainer({
   };
   const refreshPage = () => {
     history.push(routeConstants.itunes.route);
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <Container maxwidth={maxwidth} padding={padding}>

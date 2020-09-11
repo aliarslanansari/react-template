@@ -132,6 +132,7 @@ const withConnect = connect(
 
 export default compose(
   withConnect,
+  injectIntl,
   memo
 )(SongDetailsContainer);
 

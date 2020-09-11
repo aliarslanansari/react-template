@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SongDetailsContainer /> tests should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div>
+      <div
+        class="SongDetailsContainer__Container-sc-1gnl6st-0 bLbcEs"
+      >
+        <div
+          class="ant-skeleton ant-skeleton-active"
+        >
+          <div
+            class="ant-skeleton-content"
+          >
+            <h3
+              class="ant-skeleton-title"
+              style="width: 38%;"
+            />
+            <ul
+              class="ant-skeleton-paragraph"
+            >
+              <li />
+              <li />
+              <li
+                style="width: 61%;"
+              />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
